@@ -108,67 +108,62 @@
     </section>
 
     <!-- SEÇÃO PLANOS -->
-    <section class="planos" id="planos">
-        <div class="container">
-            <div class="section-header">
-                <h2>Planos e Investimento</h2>
-                <p>Escolha o pacote ideal para seu negócio</p>
-            </div>
-            <div class="planos-grid">
-                <!-- PLANO START -->
-                <div class="plano-card">
-                    <div class="plano-header">
-                        <h3>Plano Start</h3>
-                        <p class="preco">R$ 297<span>/mês</span></p>
-                    </div>
-                    <p class="plano-descricao">Perfeito para começar</p>
-                    <ul class="beneficios-list">
-                        <li>✓ Organização WhatsApp Business</li>
-                        <li>✓ Otimização básica Google Maps</li>
-                        <li>✓ 1 consultoria mensal</li>
-                        <li>✓ Suporte por email</li>
-                    </ul>
-                    <button class="btn btn-outline">Começar Agora</button>
-                </div>
+   <section class="planos">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nossos Planos</h2>
+      <p>Escolha o plano ideal para o seu negócio.</p>
+    </div>
 
-                <!-- PLANO PRO (DESTAQUE) -->
-                <div class="plano-card plano-destaque">
-                    <div class="badge-recomendado">⭐ MAIS RECOMENDADO</div>
-                    <div class="plano-header">
-                        <h3>Plano Pro</h3>
-                        <p class="preco">R$ 597<span>/mês</span></p>
-                    </div>
-                    <p class="plano-descricao">Crescimento garantido</p>
-                    <ul class="beneficios-list">
-                        <li>✓ Tudo do Plano Start</li>
-                        <li>✓ Instagram profissional</li>
-                        <li>✓ 4 consultorias mensais</li>
-                        <li>✓ Relatório mensal de desempenho</li>
-                        <li>✓ Suporte prioritário WhatsApp</li>
-                    </ul>
-                    <button class="btn btn-primary">Escolher Plano Pro</button>
-                </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="start">Start</button>
+      <button class="tab-btn" data-tab="pro">Pro</button>
+      <button class="tab-btn" data-tab="elite">Elite</button>
+    </div>
 
-                <!-- PLANO ELITE -->
-                <div class="plano-card">
-                    <div class="plano-header">
-                        <h3>Plano Elite</h3>
-                        <p class="preco">R$ 997<span>/mês</span></p>
-                    </div>
-                    <p class="plano-descricao">Transformação completa</p>
-                    <ul class="beneficios-list">
-                        <li>✓ Tudo do Plano Pro</li>
-                        <li>✓ Identidade visual completa</li>
-                        <li>✓ Conteúdo mensal criado</li>
-                        <li>✓ Consultoria estratégica semanal</li>
-                        <li>✓ Suporte 24/7</li>
-                    </ul>
-                    <button class="btn btn-outline">Consultar</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="tab-content active" id="start">
+      <div class="plano-card">
+        <h3>Plano Start</h3>
+        <div class="preco">R$ 50</div>
+        <ul>
+          <li>✔ Organização WhatsApp Business</li>
+          <li>✔ Otimização básica Google Maps</li>
+        </ul>
+        <a href="#" class="btn">Contratar</a>
+      </div>
+    </div>
 
+    <div class="tab-content" id="pro">
+      <div class="plano-card destaque">
+        <h3>Plano Pro</h3>
+        <div class="preco">R$ 150</div>
+        <ul>
+          <li>✔ Tudo do Start</li>
+          <li>✔ Instagram profissional</li>
+          <li>✔ Identidade visual básica</li>
+          <li>✔ Suporte WhatsApp 24h</li>
+        </ul>
+        <a href="#" class="btn">Contratar</a>
+      </div>
+    </div>
+
+    <div class="tab-content" id="elite">
+      <div class="plano-card">
+        <h3>Plano Elite</h3>
+        <div class="preco">R$ 270/mês</div>
+        <ul>
+          <li>✔ Tudo do Plano Pro</li>
+          <li>✔ Identidade visual completa</li>
+          <li>✔ Conteúdo mensal criado</li>
+          <li>✔ Consultoria estratégica semanal</li>
+          <li>✔ Suporte 24/7</li>
+        </ul>
+        <a href="#" class="btn">Contratar</a>
+      </div>
+    </div>
+
+  </div>
+</section>
     <!-- SEÇÃO COMO FUNCIONA -->
     <section class="como-funciona">
   <div class="container">
@@ -305,5 +300,19 @@
     </a>
 
     <script src="script.js"></script>
+<script>
+const buttons = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
+
+    button.classList.add('active');
+    document.getElementById(button.dataset.tab).classList.add('active');
+  });
+});
+</script>
 </body>
 </html>

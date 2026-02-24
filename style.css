@@ -557,59 +557,6 @@ body {
         padding: 1.8rem;
     }
 }
-/* ============================================
-   SEÇÃO DEPOIMENTOS
-   ============================================ */
-.depoimentos {
-    padding: 100px 0;
-    background-color: var(--cor-branco);
-}
-
-.depoimentos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.depoimento-card {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    padding: 2.5rem;
-    border-radius: 12px;
-    border-left: 4px solid var(--cor-primaria);
-    transition: var(--transicao);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-.depoimento-card:hover {
-    box-shadow: var(--shadow);
-    transform: translateY(-8px);
-}
-
-.depoimento-stars {
-    margin-bottom: 1.2rem;
-    font-size: 1.2rem;
-}
-
-.depoimento-texto {
-    color: var(--cor-secundaria);
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    font-style: italic;
-}
-
-.depoimento-autor p {
-    margin: 0.3rem 0;
-}
-
-.depoimento-autor p:first-child {
-    font-weight: 700;
-    color: var(--cor-secundaria);
-}
-
-.depoimento-autor p:last-child {
-    color: var(--cor-cinza-escuro);
-    font-size: 0.9rem;
-}
 
 /* ============================================
    CTA FINAL

@@ -400,108 +400,65 @@ body {
 /* ============================================
    SEÇÃO PLANOS
    ============================================ */
-.planos {
-    padding: 100px 0;
-    background-color: var(--cor-branco);
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
 }
 
-.planos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--cor-cinza);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: var(--transicao);
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 .plano-card {
     background-color: var(--cor-branco);
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
     padding: 2.5rem;
-    transition: var(--transicao);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.plano-card:hover {
+    border-radius: 12px;
     box-shadow: var(--shadow);
-    border-color: var(--cor-primaria);
-    transform: translateY(-8px);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
 }
 
-.plano-destaque {
-    border-color: var(--cor-primaria);
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    box-shadow: var(--shadow);
-    position: relative;
-    top: -10px;
-}
-
-.badge-recomendado {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--cor-primaria);
-    color: var(--cor-branco);
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.plano-header h3 {
-    font-size: 1.8rem;
-    color: var(--cor-secundaria);
-    margin-bottom: 0.5rem;
+.plano-card.destaque {
+    border: 2px solid var(--cor-primaria);
 }
 
 .preco {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0;
     color: var(--cor-primaria);
-    margin-bottom: 0.5rem;
 }
 
-.preco span {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--cor-cinza-escuro);
-}
-
-.plano-descricao {
-    color: var(--cor-cinza-escuro);
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.beneficios-list {
+.plano-card ul {
     list-style: none;
+    padding: 0;
     margin-bottom: 2rem;
-    flex-grow: 1;
 }
 
-.beneficios-list li {
-    padding: 0.8rem 0;
-    color: var(--cor-cinza-escuro);
-    border-bottom: 1px solid #f1f5f9;
-    transition: var(--transicao);
-}
-
-.beneficios-list li:last-child {
-    border-bottom: none;
-}
-
-.beneficios-list li:hover {
-    color: var(--cor-primaria);
-    padding-left: 10px;
-}
-
-.plano-card .btn {
-    width: 100%;
-    margin-top: auto;
+.plano-card ul li {
+    margin: 0.6rem 0;
 }
 
 /* ============================================

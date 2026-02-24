@@ -122,8 +122,10 @@ body {
     align-items: center;
 }
 
-.hero-content {
-    animation: slideInLeft 0.8s ease-out;
+.hero-content,
+.hero-visual > *:not(.animated-gradient) {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
@@ -163,7 +165,7 @@ body {
     border-radius: 20px;
     box-shadow: var(--shadow);
     animation: gradientShift 8s ease infinite;
-    z-index: 1;
+    z-index: 0;
     opacity: 0.15; /* deixa mais elegante */
 }
 
@@ -719,10 +721,6 @@ body {
     .solucoes,
     .planos,
     .antes-depois,
-    .depoimentos {
-        padding: 60px 0;
-    }
-
     .problemas-grid,
     .solucoes-grid,
     .depoimentos-grid {
